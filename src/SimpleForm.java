@@ -30,6 +30,7 @@ public class SimpleForm extends JFrame
     createForm();
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     pack();
+    setLocationRelativeTo(null);
     setVisible(true);
   }
 
