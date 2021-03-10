@@ -34,6 +34,7 @@ public class VerySimpleEditor extends JFrame
     createGUI();
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     pack();
+    setLocationRelativeTo(null);
     setVisible(true);
   }
 
@@ -113,7 +114,7 @@ public class VerySimpleEditor extends JFrame
   // Display a file chooser and load a file.
   private void loadFile()
   {
-    JFileChooser fc = new JFileChooser();
+    JFileChooser fc = new JFileChooser(".");
     int returnVal = fc.showOpenDialog(this);
     if (returnVal == JFileChooser.APPROVE_OPTION)
     {
@@ -133,7 +134,7 @@ public class VerySimpleEditor extends JFrame
   //Display a file chooser and save a file.
   private void saveFile()
   {
-    JFileChooser fc = new JFileChooser();
+    JFileChooser fc = new JFileChooser(".");
     int returnVal = fc.showSaveDialog(this);
     if (returnVal == JFileChooser.APPROVE_OPTION)
     {
